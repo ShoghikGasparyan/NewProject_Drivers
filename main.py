@@ -1,22 +1,16 @@
+import random
 from drivers import *
-# from Beginner import *
-# from Experienced import *
-# from NO_license import *
+from Novice_driver import *
+from No_license import *
+from Experienced_driver import *
 
-name = input("If you are a Beginner, please input your Name:\t")
-surname = input("Please input your surname:\t")
-age = input("Please input your age:\t")
-beginner_driver = Drivers(name, surname, age)
-beginner_driver.divers_data()
+name = input("Name and surname of first driver:\t")
+age = int(input("Input age of first driver:\t"))
+license = input("Have license - YES OR NO:\t")
+speed_list = []
+length = 5
+while len(speed_list) < length:
+    speed_list.append(random.randint(0, 300))
 
-name = input("If you are an experienced driver, please input your Name:\t")
-surname = input("Please input your surname:\t")
-age = input("Please input your age:\t")
-experienced_driver = Drivers(name, surname, age)
-experienced_driver.divers_data()
-
-name = input("If you have no license, please input your Name:\t")
-surname = input("Please input your surname:\t")
-age = input("Please input your age:\t")
-no_license_driver = Drivers(name, surname, age)
-no_license_driver.divers_data()
+no_license = Drivers(name, age, license, speed_list)
+Drivers.divers_data()
