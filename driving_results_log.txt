@@ -1,0 +1,5 @@
+
+ Sat Nov 26 03:10:25 2022 :	 The Driver is:	 Anna Mama ,  54  years old, NO  License: 
+ Anna Mama 's Car speed at the moment when policeman stopped was:  274  km/h.
+ Sat Nov 26 03:10:25 2022 :	 The Driver is:	 Kara Mara ,  41  years old, YES  License: 
+ Kara Mara 's Car speed at the moment when policeman stopped was:  83  km/h.

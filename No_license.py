@@ -1,26 +1,25 @@
-from drivers import *
+from drivers import Drivers
 import random
 
+
+
 class No_License(Drivers):
-    def __init__(self,name, age, license, speed_list):
-        super().__init__(name,age, license, speed_list)
-        self.license = license
-        self.speed_list = speed_list
+    def __init__(self, name, age, license, speed_list, speed):
+        super().__init__(name, age, license, speed_list, speed)
+        self.name = name
 
-    def drive(self):
-        return True
-
-    if drive():
-        print("yes")
-    else:
-        print("no")
 
     def speedOfCar(self):
-        for speed in self.speed_list:
+        for self.speed in self.speed_list:
             self.speed_list.append(random.randint(0, 300))
-            if speed > 60:
-                print(speed)
-                print("stop")
-                print(self.speed_list)
+            if self.speed > 60:
+                print("The speed of the No Licensed Car is: ", self.speed, " km/h")
+                print("The Policeman stopped the Car")
+                # print(self.speed_list)
                 break
 
+    def drive(self):
+        if self.speed > 60:
+            return True
+        else:
+            return False
