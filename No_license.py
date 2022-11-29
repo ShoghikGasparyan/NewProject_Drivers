@@ -1,24 +1,17 @@
-from drivers import Drivers
-import random
-
+from drivers import *
 
 
 class No_License(Drivers):
-    def __init__(self, name, age, license, speed_list, speed):
-        super().__init__(name, age, license, speed_list, speed)
-        self.name = name
+    def __init__(self, name, age, license, speed):
+        super().__init__(name, age, license, speed)
+        self.speed = speed
 
-
-    def speedOfCar(self):
-        for self.speed in self.speed_list:
-            self.speed_list.append(random.randint(0, 300))
-            if self.speed > 60:
-                print("The speed of the No Licensed Car is: ", self.speed, " km/h")
-                print("The Policeman stopped the Car")
-                # print(self.speed_list)
-                break
+    # Յուրաքանչյուր վարորդի համար գրել պոլիմորֆ մեթոդ՝ վարել, առանց պարամետրերի, որը պետք է
+    # վերադարձնի bool արժեք (ոստիկանը կանգնեցրել է – true, ոստիկանը չի կանգնեցրել – false):
+    # Վարորդին ով չունի ՎՎ կանգնեցնում են եթե նա երթեևեկում է 60-ից բարձր արագությամբ:
 
     def drive(self):
+        print("The No Licensed driver's speed is: ", self.speed, "km/h.")
         if self.speed > 60:
             return True
         else:
